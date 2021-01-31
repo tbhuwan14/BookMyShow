@@ -165,7 +165,7 @@ function MeetingForm() {
           />
         )}
         <div className="text-center">
-          <button className="btn btn-primary">BOOK APPOINTMENT</button>
+          <button className="btn btn-danger">BOOK APPOINTMENT</button>
         </div>
       </form>
     </div>

@@ -6,7 +6,7 @@ import { isSignedIn } from "../services/auth";
 function Navbar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-danger">
         <div className="container-fluid">
           <NavLink to="/" className="navbar-brand active">
             BookMyShow
@@ -29,11 +29,15 @@ function Navbar() {
             <ul className="navbar-nav">
               {!isSignedIn() ? (
                 <li className="nav-item">
-                  <NavLink to="/signin">Sign In</NavLink>
+                  <NavLink to="/signin" className="text-light">
+                    Sign In
+                  </NavLink>
                 </li>
               ) : (
                 <li className="nav-item">
-                  <NavLink to="/signout">Sign Out</NavLink>
+                  <NavLink to="/signout" className="text-light">
+                    Sign Out
+                  </NavLink>
                 </li>
               )}
             </ul>
