@@ -47,7 +47,7 @@ function MeetingForm() {
     username: Joi.string().required().label("Name"),
     meetingDescription: Joi.string().required().label("Meeting Description"),
     selectedSlot: Joi.string().required().label("Slot"),
-    selectedDate: Joi.number(),
+    selectedDate: Joi,
     attendeesEmail: Joi,
   };
 
@@ -91,9 +91,8 @@ function MeetingForm() {
     e.preventDefault();
     const newErrors = validate(meetingData, schema);
     setErrors(newErrors || {});
-    console.log(newErrors);
-    if (newErrors) return;
 
+    if (newErrors) return;
     bookSlot();
   };
 
